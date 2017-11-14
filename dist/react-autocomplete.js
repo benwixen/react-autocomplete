@@ -378,7 +378,7 @@ var Autocomplete = function (_React$Component) {
           role: 'combobox',
           'aria-autocomplete': 'list',
           'aria-expanded': open,
-          autoComplete: 'off',
+          autoComplete: inputProps.autoComplete ? inputProps.autoCapitalize : 'off',
           ref: this.exposeAPI,
           onFocus: this.handleInputFocus,
           onBlur: this.handleInputBlur,
