@@ -369,7 +369,7 @@ var Autocomplete = function (_React$Component) {
           ref: this.exposeAPI,
           onFocus: this.handleInputFocus,
           onBlur: this.handleInputBlur,
-          onChange: this.handleChange,
+          onInput: this.handleChange,
           onKeyDown: this.composeEventHandlers(this.handleKeyDown, inputProps.onKeyDown),
           onClick: this.composeEventHandlers(this.handleInputClick, inputProps.onClick),
           value: this.props.value
