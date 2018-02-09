@@ -230,6 +230,7 @@ var Autocomplete = function (_React$Component) {
     value: function renderMenu() {
       var _this4 = this;
 
+      this.setIgnoreBlur(false);
       var items = this.getFilteredItems(this.props).map(function (item, index) {
         var element = _this4.props.renderItem(item, _this4.state.highlightedIndex === index, { cursor: 'default' });
         return React.cloneElement(element, {
