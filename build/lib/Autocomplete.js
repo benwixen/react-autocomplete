@@ -217,7 +217,6 @@ var Autocomplete = function (_React$Component) {
     value: function renderMenu() {
       var _this4 = this;
 
-      this.setIgnoreBlur(false);
       var items = this.getFilteredItems(this.props).map(function (item, index) {
         var element = _this4.props.renderItem(item, _this4.state.highlightedIndex === index, { cursor: 'default' });
         return React.cloneElement(element, {
@@ -237,6 +236,9 @@ var Autocomplete = function (_React$Component) {
         top: this.state.menuTop,
         minWidth: this.state.menuWidth
       };
+      if (items.length === 0) {
+        this.setIgnoreBlur(false);
+      }
       var menu = this.props.renderMenu(items, this.props.value, style);
       return React.cloneElement(menu, {
         ref: function ref(e) {
